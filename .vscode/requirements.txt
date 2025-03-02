@@ -1,0 +1,6 @@
+Flask
+Flask-CORS
+openai
+requests
+google-api-python-client
+gunicorn

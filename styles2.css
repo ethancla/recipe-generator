@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: hsl(0, 49%, 95%);
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: hsl(0, 49%, 85%);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: hsl(20, 80%, 70%);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.generator-container {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+/* Input Fields */
+input {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background-color: hsl(20, 80%, 70%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: hsl(0, 2%, 8%);
+}
+
+/* Recipe & YouTube Results */
+#recipeResult, #youtubeResult {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+}
