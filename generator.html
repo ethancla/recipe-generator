@@ -7,10 +7,37 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-    
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <img src="images/polite_chef_pooch.png" alt="picture of dog chef" id="logo">
+            <nav>
+                <a href="index.html" class="nav-links">Home</a>
+            </nav>
+        </div>
+    </header> 
 
+    <!-- Recipe Generator Section -->
+    <main class="generator-container">
+        <h1>Recipe Generator</h1>
+        <p>Enter ingredients and find recipes you can make!</p>
 
+        <!-- User Input for Recipes -->
+        <input id="ingredients" type="text" placeholder="Enter ingredients (e.g., eggs, milk, flour)">
+        <button onclick="getRecipes()">Get Recipes</button>
 
+        <!-- Recipe Results -->
+        <div id="recipeResult"></div>
+
+        <!-- YouTube Search Section -->
+        <h1>YouTube Search</h1>
+        <p>Find videos related to cooking your recipes!</p>
+        <input id="youtubeSubject" type="text" placeholder="Enter search topic">
+        <button onclick="getYoutube()">Search YouTube</button>
+
+        <!-- YouTube Results -->
+        <div id="youtubeResult"></div>
+    </main>
 
     <script src="index.js"></script>
 </body>

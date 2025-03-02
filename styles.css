@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Roboto, sans-serif;
-    background-color: hsl(0, 49%, 92%);
+    background-color: hsl(0, 49%, 95%);
 }
 
 /* Navigation Bar */
@@ -32,6 +32,7 @@ body {
     width: 100%;
     height: 70px;
     z-index: 1000;
+    background-color: hsl(0, 49%, 95%);
 }
 
 #logo{
@@ -42,30 +43,44 @@ body {
 }
 
 .nav-links{
-    color: hsl(0, 100%, 99%);
+    color: hsl(20, 80%, 70%);
     text-decoration: none;
     font-size: 16px; 
     font-family: Roboto, sans-serif;
+    font-weight: bold;
     padding: 10px; 
-    animation:
 }
 
-nav-links:hover{
+.nav-links:hover{
     animation: glow 0.5s infinite alternate ease-in-out;
+} 
+
+#sent{
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: hsl(20, 80%, 70%);
+    color: snow;
+} 
+
+#sent:hover{
+    background-color: hsl(0, 2%, 8%);
 }
 
 
 #brief-img{
-    width: 70px;
+    width: 300px;
     height: auto;
+    margin-top: 75px;
 }
 
 .brief-intro {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 50px;
-    background-color: hsl(0, 100%, 99%);
+    padding: 30px;
+    background-color: hsl(0, 49%, 90%);
 }
 
 .brief-text{
@@ -73,11 +88,36 @@ nav-links:hover{
 }
 
 .brief-text h1{
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 900;
     margin-bottom: 10px;
+}  
+
+
+.quote-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+    gap: 20px; /* Space between image and text */
 }
 
+
+.section-img{
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+    animation: slideRight 1s ease-in-out  forwards;
+}
+
+.section-text {
+    max-width: 400px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
 
 
 main{
@@ -92,15 +132,16 @@ main{
 
 
 footer{
-    color: hsl(0, 100%, 99%);
+    color: hsl(20, 80%, 70%);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 30px;
-    font-size: 7.5px;
+    font-size: 15px;
     text-align: center;
-    background-color: hsla(0, 0%, 0%, 0.507);
+    font-weight: bold;
+    background-color: hsla(0, 49%, 87%, 0.178);
 } 
 
 
