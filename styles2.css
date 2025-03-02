@@ -8,6 +8,7 @@ body {
     font-family: Roboto, sans-serif;
     background-color: hsl(0, 49%, 95%);
     text-align: center;
+    color: hsl(0, 2%, 20%);
 }
 
 /* Navigation Bar */
@@ -22,20 +23,42 @@ body {
     width: 100%;
     height: 60px;
     z-index: 1000;
+    animation: slideRight 1s ease-in-out forwards;
 }
+
+
+
+/* Style for logo and title */
+.logo-container {
+    display: flex;
+    align-items: center;
+} 
 
 #logo {
     width: 50px;
     height: auto;
-}
+}  
+
+#site-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: hsl(20, 80%, 70%);
+    font-family: "Roboto", sans-serif; 
+} 
 
 .nav-links {
     text-decoration: none;
     color: hsl(20, 80%, 70%);
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
 }
 
+.nav-links:hover {
+    color: hsl(10, 80%, 50%);
+}
+
+/* Main Container */
 .generator-container {
     margin-top: 100px;
     padding: 20px;
@@ -43,35 +66,37 @@ body {
 
 /* Input Fields */
 input {
-    padding: 10px;
+    padding: 12px;
     width: 60%;
     font-size: 16px;
     margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 8px;
+    border: 1px solid hsl(0, 0%, 80%);
+    background-color: hsl(0, 0%, 98%);
 }
 
 /* Buttons */
 button {
-    padding: 10px 15px;
+    padding: 12px 18px;
     background-color: hsl(20, 80%, 70%);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     margin: 10px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: hsl(0, 2%, 8%);
+    background-color: hsl(10, 80%, 50%);
 }
 
-/* Recipe & YouTube Results */
-#recipeResult, #youtubeResult {
+/* Recipe Results */
+#recipeResult {
     margin-top: 20px;
     padding: 15px;
-    background-color: white;
+    background-color: hsl(50, 80%, 90%);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -79,4 +104,66 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     overflow-wrap: break-word;
+    color: hsl(0, 2%, 20%);
+    font-weight: bold;
+}
+
+/* Recipe List */
+.recipe-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recipe-item {
+    background-color: hsl(45, 80%, 85%);
+    color: hsl(0, 2%, 20%);
+    font-weight: bold;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.recipe-item:hover {
+    background-color: hsl(45, 80%, 75%);
+}
+
+/* YouTube Results */
+#youtubeResult {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: hsl(50, 80%, 90%);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+}
+
+/* YouTube Links */
+#youtubeResult a {
+    text-decoration: none;
+    color: hsl(220, 80%, 60%);
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+#youtubeResult a:hover {
+    color: hsl(220, 80%, 40%);
+}
+
+/* Animations */
+@keyframes slideRight {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

@@ -9,22 +9,22 @@ function getRecipes() {
   .then(response => response.json())
   .then(data => {
       if (data.error) {
-          document.getElementById("recipeResult").innerHTML = `<p style="color:red;">Error: ${data.error}</p>`;
+          document.getElementById("recipeResult").innerHTML = `<p class="error-message">Error: ${data.error}</p>`;
           return;
       }
 
-      const recipes = data.foods || []; // Assuming the API returns {"foods": [...]}
-      let recipeHTML = "<h3>Suggested Recipes:</h3><ul>";
+      const recipes = data.foods || [];
+      let recipeHTML = "<h3>Suggested Recipes:</h3><ul class='recipe-list'>";
 
       recipes.forEach(recipe => {
-          recipeHTML += `<li>${recipe}</li>`;
+          recipeHTML += `<li class="recipe-item">${recipe}</li>`;
       });
 
       recipeHTML += "</ul>";
       document.getElementById("recipeResult").innerHTML = recipeHTML;
   })
   .catch(error => {
-      document.getElementById("recipeResult").innerHTML = `<p style="color:red;">Fetch Error: ${error.message}</p>`;
+      document.getElementById("recipeResult").innerHTML = `<p class="error-message">Fetch Error: ${error.message}</p>`;
   });
 }
 
@@ -35,7 +35,7 @@ function getYoutube() {
   .then(response => response.json())
   .then(data => {
       if (data.error) {
-          document.getElementById("youtubeResult").innerHTML = `<p style="color:red;">Error: ${data.error}</p>`;
+          document.getElementById("youtubeResult").innerHTML = `<p class="error-message">Error: ${data.error}</p>`;
           return;
       }
 
@@ -43,9 +43,9 @@ function getYoutube() {
       data.forEach(video => {
           youtubeHTML += `
               <div class="youtube-video">
-                  <a href="${video.url}" target="_blank">
+                  <a href="${video.url}" target="_blank" class="youtube-link">
                       <img src="${video.thumbnail}" alt="${video.title}" />
-                      <p>${video.title}</p>
+                      <p class="youtube-title">${video.title}</p>
                   </a>
               </div>
           `;
@@ -54,6 +54,6 @@ function getYoutube() {
       document.getElementById("youtubeResult").innerHTML = youtubeHTML;
   })
   .catch(error => {
-      document.getElementById("youtubeResult").innerHTML = `<p style="color:red;">Fetch Error: ${error.message}</p>`;
+      document.getElementById("youtubeResult").innerHTML = `<p class="error-message">Fetch Error: ${error.message}</p>`;
   });
 }

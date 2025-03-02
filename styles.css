@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Roboto, sans-serif;
-    background-color: hsl(0, 49%, 95%);
+    background-color: #FAF3E0;
 }
 
 /* Navigation Bar */
@@ -32,14 +32,30 @@ body {
     width: 100%;
     height: 70px;
     z-index: 1000;
-    background-color: hsl(0, 49%, 95%);
+    background-color: #FFF3E0;
 }
 
-#logo{
-    width: 70px;
+/* Style for logo and title */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 50px; /* Adjust as needed */
     height: auto;
     margin-right: 10px;
-    animation: slideRight 1s ease-in-out  forwards;
+}
+
+#site-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: hsl(20, 80%, 70%);
+    font-family: "Roboto", sans-serif; 
+} 
+
+#site-title:hover{
+    animation: glow 0.5s infinite alternate ease-in-out;
 }
 
 .nav-links{
@@ -80,7 +96,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 30px;
-    background-color: hsl(0, 49%, 90%);
+    background-color: #FFCC80;
 }
 
 .brief-text{
@@ -91,6 +107,7 @@ body {
     font-size: 40px;
     font-weight: 900;
     margin-bottom: 10px;
+    color: #4E342E;
 }  
 
 
@@ -132,7 +149,7 @@ main{
 
 
 footer{
-    color: hsl(20, 80%, 70%);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,7 +158,7 @@ footer{
     font-size: 15px;
     text-align: center;
     font-weight: bold;
-    background-color: hsla(0, 49%, 87%, 0.178);
+    background-color: #795548;
 } 
 
 
